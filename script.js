@@ -30,6 +30,15 @@ function addProject(newProject){
     <p>${newProject.name}</p>
     `
     userCard.appendChild(project)
+    for (language in newProject.languages){
+        const languageCard = document.createElement("span");
+        languageCard.classList.add('span-' + newProject.languages[language])
+        languageCard.innerHTML = `
+            ${newProject.languages[language]}
+            `
+        project.appendChild(languageCard)
+        //languageCard.appendChild(newProject.languages[language])
+    }
 }
 
 // getUserProjects will make an API request to get the projects

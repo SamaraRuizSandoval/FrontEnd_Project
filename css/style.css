@@ -37,6 +37,11 @@ hr {
     margin: 0px 20px;
 }
 
+span {
+    margin-left: 20px;
+    background-color: #0abde3;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -77,4 +82,24 @@ hr {
 .projects-container p {
     padding-top: 5px;
     margin-bottom: 5px;
+}
+
+.span-JavaScript {
+    background-color: var(--javaScript);
+}
+
+.span-TypeScript{
+    background-color: var(--typeScript);
+}
+
+.span-Python{
+    background-color: var(--python);
+}
+
+.span-Go{
+    background-color: var(--go);
+}
+
+.span-Bash{
+    background-color: var(--bash);
 }
