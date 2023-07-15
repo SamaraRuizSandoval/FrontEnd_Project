@@ -1,14 +1,17 @@
 const cardContainer = document.querySelector(".card-container") 
 
-// Function that creates the user cards 
+// addUserCards adds the html template that conforms a user card
 function addUserCard(userInfo){
     const userCard = document.createElement("div");
     userCard.classList.add('user-card')
     userCard.innerHTML = `
-    <div class="user-img"></div>
+    <div class="picture">
+        <div class="user-img"></div>
+    </div>
     <div class="user-info">
         <h2>${userInfo.name}</h2>
         <p class="user-role">${userInfo.role}</p>
+        <hr class="solid">
     </div>
     <div class="projects-container">
         <h2>Projects</h2>
@@ -18,6 +21,7 @@ function addUserCard(userInfo){
     cardContainer.appendChild(userCard);
 }
 
+// addProject adds the html template that conforms a project (name and languages)
 function addProject(newProject){
     const userCard = document.querySelector(".project-user" + newProject.user_id) 
     const project = document.createElement("div");
@@ -28,6 +32,7 @@ function addProject(newProject){
     userCard.appendChild(project)
 }
 
+// getUserProjects will make an API request to get the projects
 function getUserProjects(){
     fetch('https://mocki.io/v1/b11da0f2-6d4f-4211-9e7c-45f6580eb5bf')
     .then(function(response) {
