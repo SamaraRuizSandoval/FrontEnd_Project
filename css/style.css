@@ -1,0 +1,44 @@
+:root{
+    --javaScript:#f368e0;
+    --typeScript:#ff9f43;
+    --python:#ee5253;
+    --go: #0abde3;
+    --bash: #10ac84;
+}
+
+* {
+    box-sizing: border-box;     /* ? What does this do? */
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;     /* ! I migth need to change this */
+    grid-gap: 2rem;              /* ! I migth need to change this */
+}
+
+.user-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 320px;
+    height: 462px;
+    box-shadow: 0px 2px 8px 0px; /* ! I migth need to change this */
+}
+
+.user-img {
+    width: 130px;
+    height: 130px;
+    background: #C4C4C4;
+}
